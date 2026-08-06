@@ -6,10 +6,12 @@ Website tìm việc làm tĩnh (HTML/CSS/JS thuần), chạy hoàn toàn trên t
 
 ```
 job-board/
-├── index.html    # Khung trang + form tìm kiếm/lọc
-├── style.css     # Giao diện "bảng tin dán tờ rơi"
-├── script.js     # Logic lọc, sắp xếp, render danh sách việc làm
-├── data.js       # Dữ liệu việc làm mẫu (sửa hoặc thay bằng dữ liệu thật)
+├── index.html       # Trang chủ — giới thiệu nhanh, số liệu, tin mới nhất
+├── viec-lam.html    # Trang danh sách việc làm — form tìm kiếm/lọc
+├── gioi-thieu.html  # Trang giới thiệu về Chợ Việc
+├── style.css        # Giao diện "bảng tin dán tờ rơi"
+├── script.js        # Logic lọc, sắp xếp, render danh sách việc làm (dùng ở viec-lam.html)
+├── data.js          # Dữ liệu việc làm mẫu (sửa hoặc thay bằng dữ liệu thật)
 └── README.md
 ```
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chợ Việc — Bảng tin tuyển dụng</title>
-<meta name="description" content="Chợ Việc: tìm việc làm nhanh, lọc theo ngành, khu vực, mức lương — như dạo một bảng tin tuyển dụng ngoài phố.">
+<title>Chợ Việc — Tìm việc làm nhanh, đơn giản</title>
+<meta name="description" content="Chợ Việc: bảng tin tuyển dụng tìm việc làm nhanh, lọc theo ngành, khu vực, mức lương — như dạo một bảng tin tuyển dụng ngoài phố.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -15,69 +15,80 @@
 
 <header class="site-head">
   <div class="wrap head-row">
-    <a href="#" class="brand">
+    <a href="index.html" class="brand">
       <span class="brand-mark">CV</span>
       <span class="brand-text">Chợ Việc</span>
     </a>
     <p class="tagline">Bảng tin việc làm — dán tin, gỡ tin, tìm việc mỗi ngày.</p>
+    <nav class="site-nav" aria-label="Điều hướng chính">
+      <a href="index.html" aria-current="page">Trang chủ</a>
+      <a href="viec-lam.html">Việc làm</a>
+      <a href="gioi-thieu.html">Giới thiệu</a>
+    </nav>
   </div>
 </header>
 
 <main class="wrap">
 
-  <section class="search-panel" aria-label="Tìm kiếm việc làm">
-    <div class="search-panel-inner">
-      <label class="field field-main">
-        <span class="field-label">Từ khoá</span>
-        <input type="text" id="q" placeholder="Vị trí, công ty, kỹ năng…" autocomplete="off">
-      </label>
-
-      <label class="field">
-        <span class="field-label">Khu vực</span>
-        <select id="location">
-          <option value="">Tất cả khu vực</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span class="field-label">Ngành nghề</span>
-        <select id="category">
-          <option value="">Tất cả ngành</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span class="field-label">Hình thức</span>
-        <select id="type">
-          <option value="">Tất cả hình thức</option>
-        </select>
-      </label>
-
-      <label class="field">
-        <span class="field-label">Sắp xếp</span>
-        <select id="sort">
-          <option value="new">Mới đăng</option>
-          <option value="salary-desc">Lương cao → thấp</option>
-          <option value="salary-asc">Lương thấp → cao</option>
-        </select>
-      </label>
+  <section class="hero">
+    <p class="hero-kicker">Bảng tin tuyển dụng #1 kiểu phố cổ</p>
+    <h1>Tìm việc như dạo một bảng tin ngoài phố — nhanh, thật, không rườm rà.</h1>
+    <p>Chợ Việc gom tin tuyển dụng từ nhiều ngành nghề và khu vực trên cả nước, lọc theo từ khoá, lương, hình thức làm việc chỉ trong vài giây.</p>
+    <div class="hero-actions">
+      <a href="viec-lam.html" class="btn btn-primary">Xem việc làm →</a>
+      <a href="gioi-thieu.html" class="btn btn-ghost">Giới thiệu về Chợ Việc</a>
     </div>
-
-    <div class="chip-row" id="chip-row" aria-label="Lọc nhanh"></div>
   </section>
 
-  <div class="result-strip">
-    <span id="result-count" class="result-count">— tin</span>
-    <button id="clear-filters" class="text-btn" type="button">Xoá lọc</button>
+  <div class="stat-strip" id="stat-strip">
+    <div class="stat-card">
+      <span class="stat-num" id="stat-jobs">—</span>
+      <span class="stat-label">Tin đang tuyển</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" id="stat-locations">—</span>
+      <span class="stat-label">Khu vực</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-num" id="stat-categories">—</span>
+      <span class="stat-label">Ngành nghề</span>
+    </div>
   </div>
 
-  <section class="board" id="board" aria-live="polite">
-    <!-- job cards injected here -->
-  </section>
+  <div class="section-head">
+    <h2>Tin mới đăng</h2>
+    <a href="viec-lam.html">Xem tất cả →</a>
+  </div>
+  <div class="mini-board" id="mini-board"></div>
 
-  <p class="empty-state" id="empty-state" hidden>
-    Không có tin nào khớp. Thử bỏ bớt bộ lọc hoặc đổi từ khoá xem sao.
-  </p>
+  <div class="section-head">
+    <h2>Vì sao chọn Chợ Việc</h2>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">01</div>
+      <h3>Lọc nhanh, đúng nhu cầu</h3>
+      <p>Tìm theo từ khoá, khu vực, ngành nghề, mức lương và hình thức làm việc chỉ trong một trang.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">02</div>
+      <h3>Không đăng ký, không rườm rà</h3>
+      <p>Chạy hoàn toàn trên trình duyệt, xem tin ngay không cần tài khoản hay chờ đợi.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">03</div>
+      <h3>Lưu tin trong phiên duyệt web</h3>
+      <p>Đánh dấu những tin ưng ý bằng nút "Lưu tin" để xem lại trong lúc tìm việc.</p>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div>
+      <h2>Sẵn sàng tìm công việc tiếp theo?</h2>
+      <p>Dạo một vòng bảng tin, lọc theo đúng ngành và khu vực của bạn.</p>
+    </div>
+    <a href="viec-lam.html" class="btn btn-primary">Tìm việc ngay →</a>
+  </div>
 
 </main>
 
@@ -89,6 +100,33 @@
 </footer>
 
 <script src="data.js"></script>
-<script src="script.js"></script>
+<script>
+  (function () {
+    "use strict";
+
+    document.getElementById("stat-jobs").textContent = JOBS.length;
+    document.getElementById("stat-locations").textContent = new Set(JOBS.map((j) => j.location)).size;
+    document.getElementById("stat-categories").textContent = new Set(JOBS.map((j) => j.category)).size;
+
+    function formatSalary(min, max) {
+      return `${min} – ${max} triệu / tháng`;
+    }
+
+    const latest = JOBS.slice().sort((a, b) => a.postedDaysAgo - b.postedDaysAgo).slice(0, 3);
+    const miniBoard = document.getElementById("mini-board");
+
+    latest.forEach((job) => {
+      const a = document.createElement("a");
+      a.href = "viec-lam.html";
+      a.className = "mini-card";
+      a.innerHTML = `
+        <h3 class="job-title">${job.title}</h3>
+        <p class="job-company">${job.company} · ${job.location}</p>
+        <p class="job-salary">${formatSalary(job.salaryMin, job.salaryMax)}</p>
+      `;
+      miniBoard.appendChild(a);
+    });
+  })();
+</script>
 </body>
 </html>
