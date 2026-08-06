@@ -2,6 +2,9 @@
 
 Website tìm việc làm tĩnh (HTML/CSS/JS thuần), chạy hoàn toàn trên trình duyệt — không cần server hay build step. Có thể deploy miễn phí bằng GitHub Pages.
 
+## Link Website
+https://vulcabutcool.github.io/ChoViec/
+
 ## Tính năng
 
 - Tìm theo từ khoá (chức danh, công ty, kỹ năng)
